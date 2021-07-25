@@ -33,8 +33,7 @@ def break_start(message):
     df = pd.DataFrame(worksheet.get_all_records())
     cells = worksheet.findall(real_name)
     for cell in cells:
-        cell.row
-    cell = cell.row
+        cell = cell.row
     if df.iloc[cell-2, 4] == '99:99':
         message.send(f'休憩開始時刻は、 {break_start}です。')
         df.iloc[cell-2, 4] = break_start
@@ -54,8 +53,7 @@ def break_end(message):
     df = pd.DataFrame(worksheet.get_all_records())
     cells = worksheet.findall(real_name)
     for cell in cells:
-        cell.row
-    cell = cell.row
+        cell = cell.row
     if df.iloc[cell-2, 5] == '99:99':
         message.send(f'休憩終了時刻は、 {break_end}です。')
         df.iloc[cell-2, 5] = break_end
@@ -65,8 +63,7 @@ def break_end(message):
         df = pd.DataFrame(worksheet.get_all_records())
         cells = worksheet.findall(real_name)
         for cell in cells:
-            cell.row
-        cell = cell.row
+            cell = cell.row
         if df.iloc[cell-2, 5] == "More break?":
             bt = df.iloc[-1, 4]
             message.send(f'休憩時間が{bt}です。1時間を超えてますので勤怠申請をお願いします。')
@@ -88,8 +85,7 @@ def punch_out(message):
     df = pd.DataFrame(worksheet.get_all_records())
     cells = worksheet.findall(real_name)
     for cell in cells:
-        cell.row
-    cell = cell.row
+        cell = cell.row
     if df.iloc[cell-2, 3] == '99:99':
         message.send(f'退勤時刻は、 {punch_out}です。')
         df.iloc[cell-2, 3] = punch_out
@@ -99,8 +95,7 @@ def punch_out(message):
         df = pd.DataFrame(worksheet.get_all_records())
         cells = worksheet.findall(real_name)
         for cell in cells:
-            cell.row
-        cell = cell.row
+            cell = cell.row
         if df.iloc[cell-2, 2] == 'Overtime?':
             wt = df.iloc[-1, 1]
             message.send(f'勤務時間が{wt}です。8時間5分を超えているようですので勤怠申請をお願いします。')
